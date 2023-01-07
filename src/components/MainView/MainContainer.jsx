@@ -2,27 +2,43 @@ import { BsPlusCircleFill } from 'react-icons/bs';
 import { useState } from 'react';
 import ChannelBar from './ChannelBar';
 
-const ContentContainer = () => {
-  return (
-    
-    <div className='content-container'>
-      {/* <TopNavigation /> */}
-      <div className='content-list'>
-       
+const ContentContainer = (props) => {
+
+    return (
+      <div className='content-container'>
+        {/* <TopNavigation /> */}
+        <div className='content-list'>
+        <Post
+            name='Ada'
+            timestamp='one week ago'
+            text={props.text}
+          />
+        </div>
+        <BottomBar />
       </div>
-      <BottomBar />
-    </div>
-  );
+    );
+
 };
 
-const MainContainer = () => {
-  const [componentToShow, setComponentToShow] = useState("home");
+const MainContainer = (props) => {
   
-    return (
-        <div className='main-container' id="MC">
-            <ContentContainer />
-        </div>
-    )
+    let cc = props.curComp
+    console.log("curComp: "+cc);
+
+    switch (cc){
+      case "Home 💡":
+        return (
+          <div className='main-container' id="MC">
+              <ContentContainer text={cc}/>
+          </div>
+      )
+      default:
+        return (
+          <div className='main-container' id="MC">
+              <ContentContainer text={"HOME D"}/>
+          </div>
+      )
+    }
 }
 
 const BottomBar = () => (
