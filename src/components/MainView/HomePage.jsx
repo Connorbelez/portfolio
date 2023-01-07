@@ -17,7 +17,10 @@ export function BG(props) {
     console.log("THEME FROM BG: ",+theme);
     if(theme){
         return (
-                <Particles options={darkParticleOptions} init={particlesInit} className="h-screen"/>
+                
+                <Particles options={darkParticleOptions} init={particlesInit} className="h-screen">
+                    
+                </Particles>  
         );
     }else{
         return (
