@@ -12,7 +12,7 @@ const MainContainer = (props) => {
     switch (cc){
       case "Home 💡":
         return (
-          <div className='main-container' id="MC">
+          <div className='main-container h-screen' id="MC">
               <BG />
           </div>
       )
