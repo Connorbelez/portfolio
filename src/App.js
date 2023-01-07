@@ -3,7 +3,7 @@ import './App.css';
 import SideBar from './components/SideBar/SideBar';
 import MainContainer from './components/MainView/MainContainer';
 import {useState} from 'react';
-
+import useDarkMode from './hooks/useDarkMode';
 // const PageSwitchHandler = () => {
 //   const [componentToShow, setComponentToShow] = useState("home");
 
@@ -11,6 +11,7 @@ import {useState} from 'react';
 
 function App() {
   const [componentToShow, setComponentToShow] = useState("Home 💡");
+  const [darkTheme, setDarkTheme] = useDarkMode();
   const pageSwitchHandler = (newVal) => {
     console.log("PAGE SWITCH HANDLER! :" + newVal );
     
@@ -23,8 +24,8 @@ function App() {
 
   return (
     <div className="flex h-screen">
-      <SideBar pshOnClick={pageSwitchHandler} curComp={componentToShow}/>
-      <MainContainer curComp={componentToShow}/>
+      <SideBar pshOnClick={pageSwitchHandler} theme={darkTheme} setTheme={setDarkTheme} curComp={componentToShow}/>
+      <MainContainer theme={darkTheme} curComp={componentToShow}/>
     </div>
   );
 }

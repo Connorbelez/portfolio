@@ -28,14 +28,16 @@ const SideBar = (props) => {
         <Divider />
         <SideBarIcon icon={<BsGearFill size="22" />} text={"Settings 💡"} callBack={props.pshOnClick} />
         {/* <SideBarIcon icon={ThemeIcon} /> */}
-        <ThemeIcon />
+        <ThemeIcon theme={props.theme} setTheme={props.setTheme}/>
         </div>
     )
 }; 
 
-const ThemeIcon = () => {
-    const [darkTheme, setDarkTheme] = useDarkMode();
-    const handleMode = () => setDarkTheme(!darkTheme);
+const ThemeIcon = (props) => {
+    // const [darkTheme, setDarkTheme] = useDarkMode();
+    let darkTheme = props.theme 
+
+    const handleMode = () => props.setTheme(!darkTheme);
     return (
         <div className="sidebar-icon group">
       <span onClick={handleMode}>

@@ -8,12 +8,12 @@ const MainContainer = (props) => {
   
     let cc = props.curComp
     console.log("curComp: "+cc);
-
+    let theme = props.theme;
     switch (cc){
       case "Home 💡":
         return (
           <div className='main-container h-screen' id="MC">
-              <BG />
+              <BG theme={theme}/>
           </div>
       )
       case "t1 💡":
