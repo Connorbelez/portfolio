@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 
 import useLocalStorage from './changePage';
 
-const useDarkMode = () => {
-  console.log("DARK MODE!");
+const ChangeContent = () => {
+  console.log("Change Content MODE!");
   const [enabled, setEnabled] = useLocalStorage('dark-theme');
   const isEnabled = typeof enabledState === 'undefined' && enabled;
 
@@ -17,4 +17,4 @@ const useDarkMode = () => {
   return [enabled, setEnabled];
 };
 
-export default useDarkMode;
+export default ChangeContent;

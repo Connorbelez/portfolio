@@ -18,7 +18,8 @@ const SideBar = () => {
         <div className="fixed top-0 h-screen w-16 
                         flex flex-col
                         bg-gray-100 text-gray-900  
-                        dark:bg-gray-900 dark:text-white shadow-lg">
+                        dark:bg-gray-900 dark:text-white 
+                        shadow-lg">
         <SideBarIcon icon={<FaFire size="28" />}/>
         <Divider />
         <SideBarIcon icon={<BsPlus size="32" />} />
@@ -39,9 +40,9 @@ const ThemeIcon = () => {
         <div className="sidebar-icon group">
       <span onClick={handleMode}>
         {darkTheme ? (
-          <FaSun size='24' className='top-navigation-icon' />
+          <FaSun size='24' />
         ) : (
-          <FaMoon size='24' className='top-navigation-icon' />
+          <FaMoon size='24' />
         )}
       </span>
     </div>
@@ -54,7 +55,7 @@ const SideBarIcon = ({ icon, text = 'tooltip 💡'}) => (
     //however group does not work in apply so it must be stated here. 
     <div className="sidebar-icon group">
         {icon}
-        <span class ="sidebar-tooltip group-hover:scale-100">
+        <span class ="sidebar-tooltip group-hover:scale-100" >
             {text}
         </span>
     </div>
