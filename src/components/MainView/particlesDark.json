@@ -32,7 +32,7 @@
                 "distance": 40,
                 "duration": 2,
                 "opacity": 8,
-                "size": 6,
+                "size": 10,
                 "speed": 3
             },
             "connect": {
@@ -73,9 +73,9 @@
             "blink": false,
             "color": "#ffffff",
             "consent": false,
-            "distance": 30,
+            "distance": 130,
             "enable": true,
-            "opacity": 0.4,
+            "opacity": 0.8,
             "width": 1
         },
         "move": {
@@ -101,12 +101,12 @@
         "opacity": {
             "animation": {
                 "enable": true,
-                "minimumValue": 0.05,
+                "minimumValue": 0.1,
                 "speed": 2,
                 "sync": false
             },
             "random": false,
-            "value": 0.4
+            "value": 0.8
         },
         "shape": {
             "type": "circle"
@@ -140,7 +140,7 @@
         "url": "https://particles.js.org/images/smalldeer.svg"
     },
     "background": {
-        "color": "#000000",
+        "color": "#36393f",
         "image": "",
         "position": "50% 50%",
         "repeat": "no-repeat",

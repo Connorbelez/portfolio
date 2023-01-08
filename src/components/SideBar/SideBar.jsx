@@ -1,8 +1,9 @@
 import { BsPlus, BsFillLightningFill, BsGearFill } from 'react-icons/bs';
-// import { FaFire, FaPoo } from 'react-icons/fa';
+import {RiContactsLine} from 'react-icons/ri'
 import {
     FaFire,
     FaPoo,
+    FaInfo,
     FaSearch,
     FaHashtag,
     FaRegBell,
@@ -10,6 +11,8 @@ import {
     FaMoon,
     FaSun,
   } from 'react-icons/fa';
+
+  import {FiInfo } from 'react-icons/fi'
   
 import useDarkMode from '../../hooks/useDarkMode';
   
@@ -20,15 +23,15 @@ const SideBar = (props) => {
                         bg-gray-100 text-gray-900  
                         dark:bg-gray-900 dark:text-white 
                         shadow-lg">
-        <SideBarIcon icon={<FaFire size="28" />} text={"Home 💡"} callBack={props.pshOnClick}/>
+        <SideBarIcon className='z-1' icon={<FaFire size="28" />} text={"Home 💡"} callBack={props.pshOnClick}/>
         <Divider />
-        <SideBarIcon icon={<BsPlus size="32" />} text={"t1 💡"} callBack={props.pshOnClick}/>
+        <SideBarIcon icon={<FiInfo size="30" />} text={"About Me 💡"} callBack={props.pshOnClick}/>
         <SideBarIcon icon={<BsFillLightningFill size="20" />} text={"t2 💡"} callBack={props.pshOnClick}/>
-        <SideBarIcon icon={<FaPoo size="20" />} text={"t3 💡"} callBack={props.pshOnClick}/>
+        <SideBarIcon icon={<BsFillLightningFill size="20" />} text={"t3 💡"} callBack={props.pshOnClick}/>
         <Divider />
         <SideBarIcon icon={<BsGearFill size="22" />} text={"Settings 💡"} callBack={props.pshOnClick} />
         {/* <SideBarIcon icon={ThemeIcon} /> */}
-        <ThemeIcon theme={props.theme} setTheme={props.setTheme}/>
+        <ThemeIcon theme={props.theme} setTheme={props.setTheme} text={"Theme"}/>
         </div>
     )
 }; 
@@ -41,6 +44,7 @@ const ThemeIcon = (props) => {
     return (
         <div className="sidebar-icon group">
       <span onClick={handleMode}>
+
         {darkTheme ? (
           <FaSun size='24' />
         ) : (

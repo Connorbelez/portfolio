@@ -23,10 +23,21 @@ function App() {
   }
 
   return (
-    <div className="flex h-screen">
-      <SideBar pshOnClick={pageSwitchHandler} theme={darkTheme} setTheme={setDarkTheme} curComp={componentToShow}/>
-      <MainContainer theme={darkTheme} curComp={componentToShow}/>
+
+    <div className='flex h-screen'>
+
+
+      <div className='z-10 w-16'>      
+        <SideBar pshOnClick={pageSwitchHandler} theme={darkTheme} setTheme={setDarkTheme} curComp={componentToShow}/>
+      </div>
+      <div className="flex h-screen z-0">
+        <MainContainer theme={darkTheme} curComp={componentToShow}/>
+      </div>
+
+
+
     </div>
+
   );
 }
 
