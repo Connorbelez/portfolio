@@ -5,6 +5,9 @@ module.exports = {
   content: ['./src/**/*.{js,jsx}', './public/index.html'],
   darkMode: 'class', // class, 'media' or boolean
   theme: {
+    fontFamily: {
+      display: ['Source Code Pro', 'regular']
+    },
     extend: {
       colors: {
         gray: {

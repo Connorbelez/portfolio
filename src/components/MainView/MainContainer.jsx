@@ -12,9 +12,9 @@ const MainContainer = (props) => {
     switch (cc){
       case "Home 💡":
         return (
-          <div className='main-container h-screen' id="MC">
+          <div className='main-container z-0 h-screen' id="MC">
               <BG theme={theme}/>
-              <h1 className="absolute w-full py-2.5 top-10 inset-x-0 dark:text-white text-black text-xl text-center leading-4">Connor Beleznay</h1>
+              <h1 className="absolute pl-16 z-0 py-2.5 top-10 inset-x-0 dark:text-green-500 text-black text-5xl text-center leading-4">Connor Beleznay</h1>
           </div>
       )
       case "t1 💡":

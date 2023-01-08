@@ -24,8 +24,13 @@ function App() {
 
   return (
     <div className="flex h-screen">
-      <SideBar pshOnClick={pageSwitchHandler} theme={darkTheme} setTheme={setDarkTheme} curComp={componentToShow}/>
-      <MainContainer theme={darkTheme} curComp={componentToShow}/>
+        <SideBar pshOnClick={pageSwitchHandler} theme={darkTheme} setTheme={setDarkTheme} curComp={componentToShow}/>
+
+      <div className="flex ml-16">
+        <MainContainer theme={darkTheme} curComp={componentToShow}/>
+      </div>
+      {/* <SideBar pshOnClick={pageSwitchHandler} theme={darkTheme} setTheme={setDarkTheme} curComp={componentToShow}/> */}
+      {/* <MainContainer className="ml-16" theme={darkTheme} curComp={componentToShow}/> */}
     </div>
   );
 }

@@ -16,7 +16,7 @@ import useDarkMode from '../../hooks/useDarkMode';
 const SideBar = (props) => {
     return (
         <div className="fixed top-0 h-screen w-16 
-                        flex flex-col
+                        flex z-10 flex-col
                         bg-gray-100 text-gray-900  
                         dark:bg-gray-900 dark:text-white 
                         shadow-lg">
